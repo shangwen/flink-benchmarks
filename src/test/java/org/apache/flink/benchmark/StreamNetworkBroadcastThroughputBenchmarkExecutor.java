@@ -18,8 +18,8 @@
 
 package org.apache.flink.benchmark;
 
-import org.apache.flink.streaming.runtime.io.benchmark.StreamNetworkBroadcastThroughputBenchmark;
 
+import org.apache.flink.streaming.runtime.io.benchmark.StreamNetworkThroughputBenchmark;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.OperationsPerInvocation;
 import org.openjdk.jmh.annotations.Setup;
@@ -60,7 +60,7 @@ public class StreamNetworkBroadcastThroughputBenchmarkExecutor extends Benchmark
 	 * Setup for the benchmark(s).
 	 */
 	@State(Thread)
-	public static class MultiEnvironment extends StreamNetworkBroadcastThroughputBenchmark {
+	public static class MultiEnvironment extends StreamNetworkThroughputBenchmark {
 
 		@Setup
 		public void setUp() throws Exception {

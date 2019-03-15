@@ -19,7 +19,6 @@
 package org.apache.flink.benchmark;
 
 import org.apache.flink.configuration.Configuration;
-import org.apache.flink.runtime.net.SSLUtilsTest;
 import org.apache.flink.streaming.runtime.io.benchmark.StreamNetworkThroughputBenchmark;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -86,10 +85,8 @@ public class StreamNetworkThroughputBenchmarkExecutor extends BenchmarkBase {
 					channels,
 					flushTimeout,
 					false,
-					false,
 					-1,
-					-1,
-					useSSL ? SSLUtilsTest.createInternalSslConfigWithKeyAndTrustStores() : new Configuration()
+					-1
 			);
 		}
 
